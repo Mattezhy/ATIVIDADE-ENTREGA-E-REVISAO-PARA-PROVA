@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    float nota1;
+    float nota2;
+    float nota3;
+    
+    float media;
+
+    printf("Digite a primeira nota: ");
+    scanf("%f",&nota1);
+    
+    printf("\nDigite a segunda nota: ");
+    scanf("%f",&nota2);
+
+    printf("\nDigite a terceira nota: ");
+    scanf("%f",&nota3);
+
+
+    media = (nota1 + nota2 + nota3) / 3;
+
+    if (media >= 7.0){
+        printf("\nAprovado com media: %.1f", media);
+    } else if (media >= 5.0 && media <= 6.9 ){
+        printf("\nEm Recuperação com media: %.1f", media);
+    } else {
+        printf("\nReprovado! com media: %.1f", media);
+    }
+
+    
+}
