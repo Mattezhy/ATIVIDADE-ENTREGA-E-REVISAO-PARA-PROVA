@@ -1,0 +1,76 @@
+#include <stdio.h>
+void soma(){
+    int valor1, valor2;
+
+    printf("\ndigite o primeiro valor: ");
+    scanf("%i",&valor1);
+
+    printf("\ndigite o segundo valor: ");
+    scanf("%i",&valor2);
+
+    valor1 += valor2;
+    printf("\no resultado da soma é: %i", valor1);
+}
+
+void subtracao(){
+    int valor1, valor2;
+
+    printf("\ndigite o primeiro valor: ");
+    scanf("%i",&valor1);
+
+    printf("\ndigite o segundo valor: ");
+    scanf("%i",&valor2);
+
+    valor1 -= valor2;
+    printf("o resultado da subtração é: %i", valor1);
+}
+
+void multiplicar(){
+    int valor1, valor2;
+
+    printf("\ndigite o primeiro valor: ");
+    scanf("%i",&valor1);
+
+    printf("\ndigite o segundo valor: ");
+    scanf("%i",&valor2);
+
+    valor1 *= valor2;
+    printf("\no resultado da multiplicação é: %i\n", valor1);
+}
+
+int main()
+{
+    int opcao;
+
+    do {
+        printf("\n----MENU DE OPÇÔES----\n");
+        printf("\n1. Somar dois numeros\n");
+        printf("\n2. Subtrair dois numeros\n");
+        printf("\n3. Multiplicar dois numeros\n");
+        printf("\n4. Sair\n");
+        printf("\nescolha uma opção: ");
+        scanf("%i", &opcao);
+
+        switch (opcao) {
+            case 1: 
+                soma();    
+            break;
+
+            case 2:
+            subtracao();
+            break;
+
+            case 3:
+            multiplicar();
+            break;
+
+            case 4:
+            printf("\nfinalizando sistema");
+            break;
+
+            default:
+            printf("\nentrada invalida!");
+        }
+    } while (opcao != 4);
+
+}
